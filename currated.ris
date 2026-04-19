@@ -1,0 +1,1099 @@
+TY  - CONF
+TI  - Attacks on Cryptoprocessor Transaction Sets
+AU  - Bond, Mike
+A2  - Koç, Çetin K.
+A2  - Naccache, David
+A2  - Paar, Christof
+AB  - Attacks are presented on the IBM 4758 CCA and the Visa Security Module. Two new attack principles are demonstrated. Related key attacks use known or chosen differences between two cryptographic keys. Data protected with one key can then be abused by manipulation using the other key. Meet in the middle attacks work by generating a large number of unknown keys of the same type, thus reducing the key space that must be searched to discover the value of one of the keys in the type. Design heuristics are presented to avoid these attacks and other common errors.
+C1  - Berlin, Heidelberg
+C3  - Cryptographic Hardware and Embedded Systems — CHES 2001
+DA  - 2001///
+PY  - 2001
+DO  - 10.1007/3-540-44709-1_19
+DP  - Springer Link
+SP  - 220
+EP  - 234
+LA  - en
+PB  - Springer
+SN  - 978-3-540-44709-2
+L1  - https://link.springer.com/content/pdf/10.1007%2F3-540-44709-1_19.pdf
+KW  - Access Control System
+KW  - Account Number
+KW  - Brute Force Search
+KW  - Design Heuristic
+KW  - Test Vector
+ER  - 
+
+TY  - JOUR
+TI  - Security without identification: transaction systems to make big brother obsolete
+AU  - Chaum, David
+T2  - Commun. ACM
+AB  - The large-scale automated transaction systems of the near future can be designed to protect the privacy and maintain the security of both individuals and organizations.
+DA  - 1985/10/01/
+PY  - 1985
+DO  - 10.1145/4372.4373
+DP  - ACM Digital Library
+VL  - 28
+IS  - 10
+SP  - 1030
+EP  - 1044
+SN  - 0001-0782
+ST  - Security without identification
+UR  - https://dl.acm.org/doi/10.1145/4372.4373
+Y2  - 2025/10/02/18:56:44
+L1  - https://dl.acm.org/doi/pdf/10.1145/4372.4373
+ER  - 
+
+TY  - JOUR
+TI  - The Transaction Concept: Virtues and Limitations
+AU  - Gray, Jim
+AU  - Parkway, Vallco
+AU  - Ca, Cupertino
+T2  - Proceedings of Seventh International Conference on Very Large Databases
+AB  - A transaction is a transformation of state which has the properties of atomicity (all or nothing), durability (effects survive failures) and consistency (a correct transformation). The transaction concept is key to the structuring of data management applications. The concept may have applicability to programming systems in general. This paper restates the transaction concepts and attempts to put several implementation approaches in perspective. It then describes some areas which require further study: (1) the integration of the transaction concept with the notion of abstract data type, (2) some techniques to allow transactions to be composed of subtransactions, and (3) handling transactions which last for extremely long times (days or months).
+DA  - 1981///
+PY  - 1981
+DP  - Zotero
+LA  - en
+L1  - https://people.eecs.berkeley.edu/~kubitron/courses/cs262a-F21/handouts/papers/theTransactionConcept.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Mimosa: Protecting Private Keys Against Memory Disclosure Attacks Using Hardware Transactional Memory
+AU  - Li, Congwu
+AU  - Guan, Le
+AU  - Lin, Jingqiang
+AU  - Luo, Bo
+AU  - Cai, Quanwei
+AU  - Jing, Jiwu
+AU  - Wang, Jing
+T2  - IEEE Transactions on Dependable and Secure Computing
+AB  - Cryptography is essential for computer and network security. When cryptosystems are deployed in computing or communication systems, it is extremely critical to protect the cryptographic keys. In practice, keys are loaded into the memory as plaintext during cryptographic computations. Therefore, the keys are subject to memory disclosure attacks that read unauthorized data from RAM. Such attacks could be performed through software exploitations, such as OpenSSL Heartbleed, even when the integrity of the victim system's binaries is maintained. They could also be done through physical methods, such as cold-boot attacks, even if the system is free of software vulnerabilities. This paper presents Mimosa, to protect RSA private keys against both software-based and physical memory disclosure attacks. Mimosa uses hardware transactional memory (HTM) to ensure that (a) whenever a malicious thread other than Mimosa attempts to read the plaintext private key, the transaction aborts and all sensitive data are automatically cleared with hardware, due to the strong atomicity guarantee of HTM; and (b) all sensitive data, including private keys and intermediate states, appear as plaintext only within CPU-bound caches, and are never loaded to RAM chips. To the best of our knowledge, Mimosa is the first solution to use transactional memory to protect sensitive data against memory attacks. However, the fragility of TSX transactions introduces extra cache-clogging denial-of-service (DoS) threats, and attackers could sharply degrade the performance by concurrent memory-intensive tasks. To mitigate the DoS threats, we further partition an RSA private-key computation into multiple transactional parts by analyzing the distribution of aborts, while (sensitive) intermediate results are still protected across transactional parts. Through extensive experiments, we show that Mimosa effectively protects cryptographic keys against attacks that attempt to read sensitive data in memory, and introduces only a small performance overhead, even with concurrent cache-clogging workloads.
+DA  - 2021/05//
+PY  - 2021
+DO  - 10.1109/TDSC.2019.2897666
+DP  - IEEE Xplore
+VL  - 18
+IS  - 3
+SP  - 1196
+EP  - 1213
+SN  - 1941-0018
+ST  - Mimosa
+UR  - https://ieeexplore.ieee.org/abstract/document/8634944
+Y2  - 2025/10/14/16:39:27
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8634944&ref=
+KW  - Cold-boot attack
+KW  - CPU-bound encryption
+KW  - Cryptography
+KW  - DMA attack
+KW  - Hardware
+KW  - Kernel
+KW  - memory disclosure attack
+KW  - Random access memory
+KW  - Registers
+KW  - transactional memory
+ER  - 
+
+TY  - CONF
+TI  - Notary: a device for secure transaction approval
+AU  - Athalye, Anish
+AU  - Belay, Adam
+AU  - Kaashoek, M. Frans
+AU  - Morris, Robert
+AU  - Zeldovich, Nickolai
+T3  - SOSP '19
+AB  - Notary is a new hardware and software architecture for running isolated approval agents in the form factor of a USB stick with a small display and buttons. Approval agents allow factoring out critical security decisions, such as getting the user's approval to sign a Bitcoin transaction or to delete a backup, to a secure environment. The key challenge addressed by Notary is to securely switch between agents on the same device. Prior systems either avoid the problem by building single-function devices like a USB U2F key, or they provide weak isolation that is susceptible to kernel bugs, side channels, or Rowhammer-like attacks. Notary achieves strong isolation using reset-based switching, along with the use of physically separate systems-on-a-chip for agent code and for the kernel, and a machine-checked proof of both the hardware's register-transfer-level design and software, showing that reset-based switching leaks no state. Notary also provides a trustworthy I/O path between the agent code and the user, which prevents an adversary from tampering with the user's screen or buttons.We built a hardware/software prototype of Notary, using a combination of ARM and RISC-V processors. The prototype demonstrates that it is feasible to verify Notary's reset-based switching, and that Notary can support diverse agents, including cryptocurrencies and a transaction approval agent for traditional client-server applications such as websites. Measurements of reset-based switching show that it is fast enough for interactive use. We analyze security bugs in existing cryptocurrency hardware wallets, which aim to provide a similar form factor and feature set as Notary, and show that Notary's design avoids many bugs that affect them.
+C1  - New York, NY, USA
+C3  - Proceedings of the 27th ACM Symposium on Operating Systems Principles
+DA  - 2019/10/27/
+PY  - 2019
+DO  - 10.1145/3341301.3359661
+DP  - ACM Digital Library
+SP  - 97
+EP  - 113
+PB  - Association for Computing Machinery
+SN  - 978-1-4503-6873-5
+ST  - Notary
+UR  - https://dl.acm.org/doi/10.1145/3341301.3359661
+Y2  - 2025/10/14/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3341301.3359661
+ER  - 
+
+TY  - JOUR
+TI  - The Economics of Bitcoin Mining, or Bitcoin in the Presence of Adversaries
+AU  - Kroll, Joshua A
+AU  - Davey, Ian C
+AU  - Felten, Edward W
+AB  - The Bitcoin digital currency depends for its correctness and stability on a combination of cryptography, distributed algorithms, and incentivedriven behavior. We examine Bitcoin as a consensus game and determine that it relies on separate consensus about the rules and about game state. An important aspect of Bitcoin’s design is the mining mechanism, in which participants expend resources on solving computational puzzles in order to collect rewards. This mechanism purportedly protects Bitcoin against certain technical problems such as inconsistencies in the system’s distributed log data structure. We consider the economics of Bitcoin mining, and whether the Bitcoin protocol can survive attacks, assuming that participants behave according to their incentives. We show that there is a Nash equilibrium in which all players behave consistently with Bitcoin’s reference implementation, along with inﬁnitely many equilibria in which they behave otherwise. We also show how a motivated adversary might be able to disrupt the Bitcoin system and “crash” the currency. Finally, we argue that Bitcoin will require the emergence of governance structures, contrary to the commonly held view in the Bitcoin community that the currency is ungovernable.
+DA  - 2013///
+PY  - 2013
+DP  - Zotero
+LA  - en
+L1  - https://infosecon.net/workshop/downloads/2013/pdf/The_Economics_of_Bitcoin_Mining,_or_Bitcoin_in_the_Presence_of_Adversaries.pdf
+ER  - 
+
+TY  - CONF
+TI  - Hijacking Bitcoin: Routing Attacks on Cryptocurrencies
+AU  - Apostolaki, Maria
+AU  - Zohar, Aviv
+AU  - Vanbever, Laurent
+T2  - 2017 IEEE Symposium on Security and Privacy (SP)
+AB  - As the most successful cryptocurrency to date, Bitcoin constitutes a target of choice for attackers. While many attack vectors have already been uncovered, one important vector has been left out though: attacking the currency via the Internet routing infrastructure itself. Indeed, by manipulating routing advertisements (BGP hijacks) or by naturally intercepting traffic, Autonomous Systems (ASes) can intercept and manipulate a large fraction of Bitcoin traffic. This paper presents the first taxonomy of routing attacks and their impact on Bitcoin, considering both small-scale attacks, targeting individual nodes, and large-scale attacks, targeting the network as a whole. While challenging, we show that two key properties make routing attacks practical: (i) the efficiency of routing manipulation; and (ii) the significant centralization of Bitcoin in terms of mining and routing. Specifically, we find that any network attacker can hijack few (<;100) BGP prefixes to isolate 50% of the mining power-even when considering that mining pools are heavily multi-homed. We also show that on-path network attackers can considerably slow down block propagation by interfering with few key Bitcoin messages. We demonstrate the feasibility of each attack against the deployed Bitcoin software. We also quantify their effectiveness on the current Bitcoin topology using data collected from a Bitcoin supernode combined with BGP routing data. The potential damage to Bitcoin is worrying. By isolating parts of the network or delaying block propagation, attackers can cause a significant amount of mining power to be wasted, leading to revenue losses and enabling a wide range of exploits such as double spending. To prevent such effects in practice, we provide both short and long-term countermeasures, some of which can be deployed immediately.
+C3  - 2017 IEEE Symposium on Security and Privacy (SP)
+DA  - 2017/05//
+PY  - 2017
+DO  - 10.1109/SP.2017.29
+DP  - IEEE Xplore
+SP  - 375
+EP  - 392
+ST  - Hijacking Bitcoin
+UR  - https://ieeexplore.ieee.org/document/7958588/
+Y2  - 2025/11/06/19:43:33
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=7958588&ref=
+KW  - BGP
+KW  - BGP hijack
+KW  - bitcoin
+KW  - Bitcoin
+KW  - cryptocurrency
+KW  - Delays
+KW  - Internet
+KW  - IP networks
+KW  - P2P networks
+KW  - Peer-to-peer computing
+KW  - routing
+KW  - Routing
+KW  - Routing protocols
+ER  - 
+
+TY  - GEN
+TI  - Sereum: Protecting Existing Smart Contracts Against Re-Entrancy Attacks
+AU  - Rodler, Michael
+AU  - Li, Wenting
+AU  - Karame, Ghassan O.
+AU  - Davi, Lucas
+AB  - Recently, a number of existing blockchain systems have witnessed major bugs and vulnerabilities within smart contracts. Although the literature features a number of proposals for securing smart contracts, these proposals mostly focus on proving the correctness or absence of a certain type of vulnerability within a contract, but cannot protect deployed (legacy) contracts from being exploited. In this paper, we address this problem in the context of re-entrancy exploits and propose a novel smart contract security technology, dubbed Sereum (Secure Ethereum), which protects existing, deployed contracts against re-entrancy attacks in a backwards compatible way based on run-time monitoring and validation. Sereum does neither require any modification nor any semantic knowledge of existing contracts. By means of implementation and evaluation using the Ethereum blockchain, we show that Sereum covers the actual execution flow of a smart contract to accurately detect and prevent attacks with a false positive rate as small as 0.06% and with negligible run-time overhead. As a by-product, we develop three advanced re-entrancy attacks to demonstrate the limitations of existing offline vulnerability analysis tools.
+DA  - 2018/12/14/
+PY  - 2018
+DO  - 10.48550/arXiv.1812.05934
+DP  - arXiv.org
+PB  - arXiv
+ST  - Sereum
+UR  - http://arxiv.org/abs/1812.05934
+Y2  - 2025/11/06/20:49:04
+L1  - http://arxiv.org/pdf/1812.05934v1
+KW  - Computer Science - Cryptography and Security
+ER  - 
+
+TY  - CONF
+TI  - A Survey of Attacks on Ethereum Smart Contracts (SoK)
+AU  - Atzei, Nicola
+AU  - Bartoletti, Massimo
+AU  - Cimoli, Tiziana
+A2  - Maffei, Matteo
+A2  - Ryan, Mark
+AB  - Smart contracts are computer programs that can be correctly executed by a network of mutually distrusting nodes, without the need of an external trusted authority. Since smart contracts handle and transfer assets of considerable value, besides their correct execution it is also crucial that their implementation is secure against attacks which aim at stealing or tampering the assets. We study this problem in Ethereum, the most well-known and used framework for smart contracts so far. We analyse the security vulnerabilities of Ethereum smart contracts, providing a taxonomy of common programming pitfalls which may lead to vulnerabilities. We show a series of attacks which exploit these vulnerabilities, allowing an adversary to steal money or cause other damage.
+C1  - Berlin, Heidelberg
+C3  - Principles of Security and Trust
+DA  - 2017///
+PY  - 2017
+DO  - 10.1007/978-3-662-54455-6_8
+DP  - Springer Link
+SP  - 164
+EP  - 186
+LA  - en
+PB  - Springer
+SN  - 978-3-662-54455-6
+L1  - https://link.springer.com/content/pdf/10.1007%2F978-3-662-54455-6_8.pdf
+KW  - Consensus Protocol
+KW  - Direct Call
+KW  - Honest Node
+KW  - Longe Branch
+KW  - Security Vulnerability
+ER  - 
+
+TY  - GEN
+TI  - Two Bitcoins at the Price of One? Double-Spending Attacks on Fast Payments in Bitcoin
+AU  - Karame, Ghassan O.
+AU  - Androulaki, Elli
+AU  - Capkun, Srdjan
+AB  - Bitcoin is a decentralized payment system that is based on Proof-of-Work. Bitcoin is currently gaining popularity as a digital currency; several businesses are starting to accept Bitcoin transactions. An example case of the growing use of Bitcoin was recently reported in the media; here, Bitcoins were used as a form of fast payment in a local fast-food restaurant.
+In this paper, we analyze the security of using Bitcoin for fast payments, where the time between the exchange of currency and goods is short (i.e., in the order of few seconds). We focus on double-
+spending attacks on fast payments and demonstrate that these attacks can be mounted at low cost on currently deployed versions of Bitcoin. We further show that the measures recommended by Bitcoin developers for the use of Bitcoin in fast transactions are not always effective in resisting double-spending; we show that if those recommendations are integrated in future Bitcoin implementations, double-spending
+attacks on Bitcoin will still be possible. Finally, we leverage on our findings and propose a lightweight countermeasure that enables the detection of double-spending attacks in fast transactions.
+DA  - 2012///
+PY  - 2012
+DP  - Cryptology ePrint Archive (eprint.iacr.org)
+ST  - Two Bitcoins at the Price of One?
+UR  - https://eprint.iacr.org/2012/248
+DB  - Cryptology ePrint Archive
+Y2  - 2025/11/06/20:47:10
+L1  - https://eprint.iacr.org/2012/248.pdf
+KW  - Bitcoin
+ER  - 
+
+TY  - CONF
+TI  - FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation
+AU  - Chen, Zhiyang
+AU  - Beillahi, Sidi Mohamed
+AU  - Long, Fan
+T3  - ICSE '24
+AB  - In decentralized finance (DeFi), lenders can offer flash loans to borrowers, i.e., loans that are only valid within a blockchain transaction and must be repaid with fees by the end of that transaction. Unlike normal loans, flash loans allow borrowers to borrow large assets without upfront collaterals deposits. Malicious adversaries use flash loans to gather large assets to exploit vulnerable DeFi protocols.In this paper, we introduce a new framework for automated synthesis of adversarial transactions that exploit DeFi protocols using flash loans. To bypass the complexity of a DeFi protocol, we propose a new technique to approximate the DeFi protocol functional behaviors using numerical methods (polynomial approximation and nearest-neighbor interpolation). We then construct an optimization query using the approximated functions of the DeFi protocol to find an adversarial attack constituted of a sequence of functions invocations with optimal parameters that gives the maximum profit. To improve the accuracy of the approximation, we propose a novel counterexample driven approximation refinement technique. We implement our framework in a tool named FlashSyn. We evaluate FlashSyn on 16 DeFi protocols that were victims to flash loan attacks and 2 DeFi protocols from Damn Vulnerable DeFi challenges. FlashSyn automatically synthesizes an adversarial attack for 16 of the 18 benchmarks, demonstrating its effectiveness in finding possible flash loan attacks.
+C1  - New York, NY, USA
+C3  - Proceedings of the IEEE/ACM 46th International Conference on Software Engineering
+DA  - 2024/04/12/
+PY  - 2024
+DO  - 10.1145/3597503.3639190
+DP  - ACM Digital Library
+SP  - 1
+EP  - 13
+PB  - Association for Computing Machinery
+SN  - 979-8-4007-0217-4
+ST  - FlashSyn
+UR  - https://dl.acm.org/doi/10.1145/3597503.3639190
+Y2  - 2025/11/06/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3597503.3639190
+ER  - 
+
+TY  - JOUR
+TI  - Using Ambient Sensors for Proximity and Relay Attack Detection in NFC Transactions: A Reproducibility Study
+AU  - Markantonakis, Konstantinos
+AU  - Meister, Julia A.
+AU  - Gurulian, Iakovos
+AU  - Shepherd, Carlton
+AU  - Naeem Akram, Raja
+AU  - Hani Abu Ghazalah, Sarah
+AU  - Kasi, Mumraiz
+AU  - Sauveron, Damien
+AU  - Hancke, Gerhard
+T2  - IEEE Access
+AB  - Near-Field Communication (NFC) has enabled mobile devices to emulate contactless smart cards, which has also rendered them susceptible to relay attacks. Numerous countermeasures have been proposed that use ambient sensors as an anti-relay mechanism. However, there are concerns regarding their efficacy in time-critical scenarios, such as transport ticketing and contactless payments. This paper empirically and comprehensively evaluates whether ambient sensors are an effective anti-relay mechanism for such NFC-based contactless transactions. To this end, we examine 17 sensors available via the Android platform. Each sensor, where feasible, was used to record measurements in 1,000 contactless transactions with 252 users across four physical locations. We then conduct an extensive four-part evaluation using similarity metrics, traditional machine learning models, and deep learning methods used in existing work and beyond. We conclude that mobile ambient sensors are currently unsuitable for detecting relay attacks on NFC contactless transactions under realistic timing constraints, contrary to the suggestions and proposals made in existing work.
+DA  - 2024///
+PY  - 2024
+DO  - 10.1109/ACCESS.2024.3479729
+DP  - IEEE Xplore
+VL  - 12
+SP  - 150372
+EP  - 150386
+SN  - 2169-3536
+ST  - Using Ambient Sensors for Proximity and Relay Attack Detection in NFC Transactions
+UR  - https://ieeexplore.ieee.org/abstract/document/10716396
+Y2  - 2025/11/06/20:46:34
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10716396&ref=
+KW  - ambient sensors
+KW  - contactless transactions
+KW  - Intelligent sensors
+KW  - mobile payment
+KW  - Near field communication
+KW  - Near field communication (NFC)
+KW  - Operating systems
+KW  - Proposals
+KW  - Protocols
+KW  - relay attacks
+KW  - Relays
+KW  - security
+KW  - Sensor phenomena and characterization
+KW  - Sensors
+KW  - Smart cards
+KW  - Smart phones
+KW  - Temperature measurement
+KW  - Temperature sensors
+ER  - 
+
+TY  - JOUR
+TI  - Integrity Data Attacks in Power Market Operations
+AU  - Xie, Le
+AU  - Mo, Yilin
+AU  - Sinopoli, Bruno
+T2  - IEEE Transactions on Smart Grid
+AB  - We study the economic impact of a potential class of integrity cyber attacks, named false data injection attacks, on electric power market operations. In particular, we show that with the knowledge of the transmission system topology, attackers may circumvent the bad data detection algorithms equipped in today's state estimator. This, in turn, may be leveraged by attackers for consistent financial arbitrage such as virtual bidding at selected pairs of nodes. This paper is a first attempt to formalize the economic impact of malicious data attacks on real-time market operations. We show how an attack could systematically construct a profitable attacking strategy, in the meantime being undetected by the system operator. Such a result is also valuable for the system operators to examine the potential economic loss due to such cyber attack. The potential impact of the false data injection attacks is illustrated on real-time market operations of the IEEE 14-bus system.
+DA  - 2011/12//
+PY  - 2011
+DO  - 10.1109/TSG.2011.2161892
+DP  - IEEE Xplore
+VL  - 2
+IS  - 4
+SP  - 659
+EP  - 666
+SN  - 1949-3061
+UR  - https://ieeexplore.ieee.org/abstract/document/6074981
+Y2  - 2025/11/06/20:45:00
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6074981&ref=
+KW  - Computer security
+KW  - Cyber security
+KW  - economic dispatch
+KW  - electricity markets
+KW  - false data injection attack
+KW  - locational marginal price
+KW  - Power systems planning
+KW  - Real time systems
+KW  - Sensor systems
+KW  - state estimation
+KW  - State estimation
+ER  - 
+
+TY  - JOUR
+TI  - Combatting Front-Running in Smart Contracts: Attack Mining, Benchmark Construction and Vulnerability Detector Evaluation
+AU  - Zhang, Wuqi
+AU  - Wei, Lili
+AU  - Cheung, Shing-Chi
+AU  - Liu, Yepang
+AU  - Li, Shuqing
+AU  - Liu, Lu
+AU  - Lyu, Michael R.
+T2  - IEEE Transactions on Software Engineering
+AB  - Front-running attacks have been a major concern on the blockchain. Attackers launch front-running attacks by inserting additional transactions before upcoming victim transactions to manipulate victim transaction executions and make profits. Recent studies have shown that front-running attacks are prevalent on the Ethereum blockchain and have caused millions of US dollars loss. It is the vulnerabilities in smart contracts, which are blockchain programs invoked by transactions, that enable the front-running attack opportunities. Although techniques to detect front-running vulnerabilities have been proposed, their performance on real-world vulnerable contracts is unclear. There is no large-scale benchmark based on real attacks to evaluate their capabilities. We make four contributions in this paper. First, we design an effective algorithm to mine real-world attacks in the blockchain history. The evaluation shows that our mining algorithm is more effective and comprehensive, achieving higher recall in finding real attacks than the previous study. Second, we propose an automated and scalable vulnerability localization approach to localize code snippets in smart contracts that enable front-running attacks. The evaluation also shows that our localization approaches are effective in achieving higher precision in pinpointing vulnerabilities compared to the baseline technique. Third, we build a benchmark consisting of 513 real-world attacks with vulnerable code labeled in 235 distinct smart contracts, which is useful to help understand the nature of front-running attacks, vulnerabilities in smart contracts, and evaluate vulnerability detection techniques. Last but not least, we conduct an empirical evaluation of seven state-of-the-art vulnerability detection techniques on our benchmark. The evaluation experiment reveals the inadequacy of existing techniques in detecting front-running vulnerabilities, with a low recall of łeq≤ 6.04%. Our further analysis identifies four common limitations in existing techniques: lack of support for inter-contract analysis, inefficient constraint solving for cryptographic operations, improper vulnerability patterns, and lack of token support.
+DA  - 2023/06//
+PY  - 2023
+DO  - 10.1109/TSE.2023.3270117
+DP  - IEEE Xplore
+VL  - 49
+IS  - 6
+SP  - 3630
+EP  - 3646
+SN  - 1939-3520
+ST  - Combatting Front-Running in Smart Contracts
+UR  - https://ieeexplore.ieee.org/abstract/document/10108045
+Y2  - 2025/11/06/20:44:24
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10108045&ref=
+KW  - Benchmark
+KW  - Benchmark testing
+KW  - blockchain
+KW  - Blockchains
+KW  - Codes
+KW  - dataset
+KW  - empirical study
+KW  - ethereum
+KW  - front-running
+KW  - History
+KW  - Location awareness
+KW  - Relays
+KW  - smart contract
+KW  - Smart contracts
+KW  - vulnerability
+ER  - 
+
+TY  - CONF
+TI  - Remote Side-Channel Attacks on Anonymous Transactions
+AU  - Tramer, Florian
+AU  - Boneh, Dan
+AU  - Paterson, Kenny
+T2  - 29th USENIX Security Symposium (USENIX Security 20)
+DA  - 2020///
+PY  - 2020
+DP  - www.usenix.org
+SP  - 2739
+EP  - 2756
+LA  - en
+SN  - 978-1-939133-17-5
+UR  - https://www.usenix.org/conference/usenixsecurity20/presentation/tramer
+Y2  - 2025/11/06/20:43:19
+L1  - https://www.usenix.org/system/files/sec20-tramer.pdf
+ER  - 
+
+TY  - CONF
+TI  - Flood & Loot: A Systemic Attack on The Lightning Network
+AU  - Harris, Jona
+AU  - Zohar, Aviv
+T3  - AFT '20
+AB  - The Lightning Network promises to alleviate Bitcoin's known scalability problems. The operation of such second layer approaches relies on the ability of participants to turn to the blockchain to claim funds at any time, which is assumed to happen rarely.One of the risks that was identified early on is that of a wide systemic attack on the protocol, in which an attacker triggers the closure of many Lightning channels at once. The resulting high volume of transactions in the blockchain will not allow for the proper settlement of all debts, and attackers may get away with stealing some funds.This paper explores the details of such an attack and evaluates its cost and overall impact on Bitcoin and the Lightning Network. Specifically, we show that an attacker is able to simultaneously cause victim nodes to overload the Bitcoin blockchain with requests and to steal funds that were locked in channels.We go on to examine the interaction of Lightning nodes with the fee estimation mechanism and show that the attacker can continuously lower the fee of transactions that will later be used by the victim in its attempts to recover funds - eventually reaching a state in which only low fractions of the block are available for lightning transactions. Our attack is made easier even further as the Lightning protocol allows the attacker to increase the fee offered by his own transactions.We show that the vast majority of nodes agree to channel opening requests from unknown sources and are therefore susceptible to this attack. We highlight differences between various implementations of the Lightning Network protocol and review the susceptibility of each one to the attack. Finally, we propose mitigation strategies to lower the systemic attack risk of the network.
+C1  - New York, NY, USA
+C3  - Proceedings of the 2nd ACM Conference on Advances in Financial Technologies
+DA  - 2020/10/26/
+PY  - 2020
+DO  - 10.1145/3419614.3423248
+DP  - ACM Digital Library
+SP  - 202
+EP  - 213
+PB  - Association for Computing Machinery
+SN  - 978-1-4503-8139-0
+ST  - Flood & Loot
+UR  - https://dl.acm.org/doi/10.1145/3419614.3423248
+Y2  - 2025/11/06/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3419614.3423248
+ER  - 
+
+TY  - CONF
+TI  - MAD-HTLC: Because HTLC is Crazy-Cheap to Attack
+AU  - Tsabary, Itay
+AU  - Yechieli, Matan
+AU  - Manuskin, Alex
+AU  - Eyal, Ittay
+T2  - 2021 IEEE Symposium on Security and Privacy (SP)
+AB  - Smart Contracts and transactions allow users to implement elaborate constructions on cryptocurrency blockchains like Bitcoin and Ethereum. Many of these constructions, including operational payment channels and atomic swaps, use a building block called Hashed Time-Locked Contract (HTLC).In this work, we distill from HTLC a specification (HTLC-Spec), and present an implementation called Mutual-Assured-Destruction Hashed Time-Locked Contract (MAD-HTLC). MAD-HTLC employs a novel approach of utilizing the existing blockchain operators, called miners, as part of the design. If a user misbehaves, MAD-HTLC incentivizes the miners to confiscate all her funds. We prove MAD-HTLC’s security using the UC framework and game-theoretic analysis. We demonstrate MAD-HTLC’s efficacy and analyze its overhead by instantiating it on Bitcoin’s and Ethereum’s operational blockchains.Notably, current miner software makes only little effort to optimize revenue, since the advantage is relatively small. However, as the demand grows and other revenue components shrink, miners are more motivated to fully optimize their fund intake. By patching the standard Bitcoin client, we demonstrate such optimization is easy to implement, making the miners natural enforcers of MAD-HTLC.Finally, we extend previous results regarding HTLC vulnerability to bribery attacks. An attacker can incentivize miners to prefer her transactions by offering high transaction fees. We demonstrate this attack can be easily implemented by patching the Bitcoin client, and use game-theoretic tools to qualitatively tighten the known cost bound of such bribery attacks in presence of rational miners. We identify bribe opportunities occurring on the Bitcoin and Ethereum main networks where a few dollars bribe could yield tens of thousands of dollars in reward (e.g., 2 for over 25K).
+C3  - 2021 IEEE Symposium on Security and Privacy (SP)
+DA  - 2021/05//
+PY  - 2021
+DO  - 10.1109/SP40001.2021.00080
+DP  - IEEE Xplore
+SP  - 1230
+EP  - 1248
+ST  - MAD-HTLC
+UR  - https://ieeexplore.ieee.org/abstract/document/9519476
+Y2  - 2025/11/06/20:42:18
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=9519476&ref=
+KW  - Bitcoin
+KW  - Blockchain
+KW  - Blockchains
+KW  - Mechanism-design
+KW  - Privacy
+KW  - Security
+KW  - Smart contracts
+KW  - Smart-contracts
+KW  - Software
+KW  - Tools
+ER  - 
+
+TY  - CONF
+TI  - ADEPTS: adaptive intrusion response using attack graphs in an e-commerce environment
+AU  - Foo, B.
+AU  - Wu, Y.-S.
+AU  - Mao, Y.-C.
+AU  - Bagchi, S.
+AU  - Spafford, E.
+T2  - 2005 International Conference on Dependable Systems and Networks (DSN'05)
+AB  - Distributed systems with multiple interacting services, especially e-commerce systems, are suitable targets for malicious attacks because of the potential financial impact. Compared to intrusion detection, automated response has received relatively less attention. In this paper, we present the design of automated response mechanisms in an intrusion tolerant system called ADEPTS. Our focus is on enforcing containment in the system, thus localizing the intrusion and allowing the system to provide service, albeit degraded. ADEPTS uses a graph of intrusion goals, called I-GRAPH, as the underlying representation in the system. In response to alerts from an intrusion detection framework, ADEPTS executes algorithms to determine the spread of the intrusion and the appropriate responses to deploy. A feedback mechanism evaluates the success of a deployed response and uses that in guiding future choices. ADEPTS is demonstrated on a distributed e-commerce system and evaluated using a survivability metric.
+C3  - 2005 International Conference on Dependable Systems and Networks (DSN'05)
+DA  - 2005/06//
+PY  - 2005
+DO  - 10.1109/DSN.2005.17
+DP  - IEEE Xplore
+SP  - 508
+EP  - 517
+ST  - ADEPTS
+UR  - https://ieeexplore.ieee.org/abstract/document/1467825
+Y2  - 2025/11/06/20:23:13
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1467825&ref=
+KW  - attack graphs
+KW  - automated intrusion response
+KW  - Computer security
+KW  - Degradation
+KW  - Detectors
+KW  - Distributed computing
+KW  - distributed e-commerce systems
+KW  - Electronic commerce
+KW  - Feedback
+KW  - Internet
+KW  - intrusion containment
+KW  - Intrusion detection
+KW  - Pattern analysis
+KW  - Pattern matching
+KW  - survivability
+ER  - 
+
+TY  - CONF
+TI  - Stake-Bleeding Attacks on Proof-of-Stake Blockchains
+AU  - Gaži, Peter
+AU  - Kiayias, Aggelos
+AU  - Russell, Alexander
+T2  - 2018 Crypto Valley Conference on Blockchain Technology (CVCBT)
+AB  - We describe a general attack on proof-of-stake (PoS) blockchains without checkpointing. Our attack leverages transaction fees, the ability to treat transactions "out of context," and the standard longest chain rule to completely dominate a blockchain. The attack grows in power with the number of honest transactions and the stake held by the adversary, and can be launched by an adversary controlling any constant fraction of the stake. With the present statistical profile of blockchain protocols, the attack can be launched given a few years of prior blockchain operation; hence it is within the realm of feasibility for PoS protocols. Most importantly, it demonstrates how closely transaction fees and rewards are coupled with the security properties of PoS protocols. More broadly, our attack must be reflected and countered in any future PoS design that avoids checkpointing, as well as any effort to remove checkpointing from existing protocols. We describe several mechanisms for protecting against the attack that include context-sensitivity of transactions and chain density statistics.
+C3  - 2018 Crypto Valley Conference on Blockchain Technology (CVCBT)
+DA  - 2018/06//
+PY  - 2018
+DO  - 10.1109/CVCBT.2018.00015
+DP  - IEEE Xplore
+SP  - 85
+EP  - 92
+UR  - https://ieeexplore.ieee.org/abstract/document/8525396
+Y2  - 2025/11/06/20:22:00
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8525396&ref=
+KW  - attack
+KW  - Bitcoin
+KW  - blockchain
+KW  - Checkpointing
+KW  - History
+KW  - proof of stake
+KW  - Protocols
+KW  - Stakeholders
+ER  - 
+
+TY  - JOUR
+TI  - DeFiRanger: Detecting DeFi Price Manipulation Attacks
+AU  - Wu, Siwei
+AU  - Yu, Zhou
+AU  - Wang, Dabao
+AU  - Zhou, Yajin
+AU  - Wu, Lei
+AU  - Wang, Haoyu
+AU  - Yuan, Xingliang
+T2  - IEEE Transactions on Dependable and Secure Computing
+AB  - The rapid growth of Decentralized Finance (DeFi) boosts the blockchain ecosystem. At the same time, attacks on DeFi applications (apps) are increasing. However, to the best of our knowledge, existing smart contract vulnerability detection tools cannot directly detect DeFi attacks. That's because they lack the capability to recover and understand high-level DeFi semantics, e.g., a user trades a token pair X and Y in a Decentralized EXchange (DEX). In this work, we focus on the detection of two new types of price manipulation attacks. To this end, we propose a platform-independent method to identify high-level DeFi semantics. Specifically, we first construct the Cash Flow Tree (CFT) from a raw transaction and then lifting the low-level semantics to high-level ones, including five advanced DeFi actions. Finally, we use patterns expressed with the recovered DeFi semantics to detect price manipulation attacks. We implemented a prototype named DeFiRanger that detected 14 zero-day security incidents. These findings were reported to affected parties or/and the community for the first time. Furthermore, the backtest experiment discovered 15 unknown historical security incidents. We further performed an attack analysis to shed light on the root causes of vulnerabilities incurring price manipulation attacks.
+DA  - 2024/07//
+PY  - 2024
+DO  - 10.1109/TDSC.2023.3346888
+DP  - IEEE Xplore
+VL  - 21
+IS  - 4
+SP  - 4147
+EP  - 4161
+SN  - 1941-0018
+ST  - DeFiRanger
+UR  - https://ieeexplore.ieee.org/abstract/document/10373899
+Y2  - 2025/11/06/20:21:22
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10373899&ref=
+KW  - Attack detection
+KW  - blockchain transaction analysis
+KW  - Cryptocurrency
+KW  - Decentralized applications
+KW  - DeFi security
+KW  - Ecosystems
+KW  - Finance
+KW  - Security
+KW  - Semantics
+KW  - Smart contracts
+ER  - 
+
+TY  - CONF
+TI  - Safeguarding Blockchain Ecosystem: Understanding and Detecting Attack Transactions on Cross-chain Bridges
+AU  - Wu, Jiajing
+AU  - Lin, Kaixin
+AU  - Lin, Dan
+AU  - Zhang, Bozhao
+AU  - Wu, Zhiying
+AU  - Su, Jianzhong
+T3  - WWW '25
+AB  - Cross-chain bridges are essential decentralized applications (DApps) to facilitate interoperability between different blockchain networks. Unlike regular DApps, the functionality of cross-chain bridges relies on the collaboration of information both on and off the chain, which exposes them to a wider risk of attacks. According to our statistics, attacks on cross-chain bridges have resulted in losses of nearly 4.3 billion since 2021. Therefore, it is particularly necessary to understand and detect attacks on cross-chain bridges. In this paper, we collect the largest number of cross-chain bridge attack incidents to date, including 49 attacks that occurred between June 2021 and September 2024, of which 22 were attacks on cross-chain bridge business logic. Our analysis reveal that attacks against cross-chain business logic cause significantly more damage than those that do not. These cross-chain attacks exhibit different patterns compared to normal transactions in terms of call structure, which effectively indicates potential attack behaviors. Given the significant losses in these cases and the scarcity of related research, this paper aims to detect attacks against cross-chain business logic, and propose the BridgeGuard tool. Specifically, BridgeGuard models cross-chain transactions from a graph perspective, and employs a two-stage detection framework comprising global and local graph mining to identify attack patterns in cross-chain transactions. We conduct multiple experiments on the datasets with 203 attack transactions and 40,000 normal cross-chain transactions. The results show that BridgeGuard's reported recall score is 36.32% higher than that of state-of-the-art tools and can detect unknown attack transactions.
+C1  - New York, NY, USA
+C3  - Proceedings of the ACM on Web Conference 2025
+DA  - 2025/04/22/
+PY  - 2025
+DO  - 10.1145/3696410.3714604
+DP  - ACM Digital Library
+SP  - 4902
+EP  - 4912
+PB  - Association for Computing Machinery
+SN  - 979-8-4007-1274-6
+ST  - Safeguarding Blockchain Ecosystem
+UR  - https://dl.acm.org/doi/10.1145/3696410.3714604
+Y2  - 2025/11/06/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3696410.3714604
+ER  - 
+
+TY  - JOUR
+TI  - Recovery from malicious transactions
+AU  - Ammann, P.
+AU  - Jajodia, S.
+AU  - Liu, Peng
+T2  - IEEE Transactions on Knowledge and Data Engineering
+AB  - Preventive measures sometimes fail to deflect malicious attacks. We adopt an information warfare perspective, which assumes success by the attacker in achieving partial, but not complete, damage. In particular, we work in the database context and consider recovery from malicious but committed transactions. Traditional recovery mechanisms do not address this problem, except for complete rollbacks, which undo the work of benign transactions as well as malicious ones, and compensating transactions, whose utility depends on application semantics. Recovery is complicated by the presence of benign transactions that depend, directly or indirectly, on the malicious transactions. We present algorithms to restore only the damaged part of the database. We identify the information that needs to be maintained for such algorithms. The initial algorithms repair damage to quiescent databases; subsequent algorithms increase availability by allowing new transactions to execute concurrently with the repair process. Also, via a study of benchmarks, we show practical examples of how offline analysis can efficiently provide the necessary data to repair the damage of malicious transactions.
+DA  - 2002/09//
+PY  - 2002
+DO  - 10.1109/TKDE.2002.1033782
+DP  - IEEE Xplore
+VL  - 14
+IS  - 5
+SP  - 1167
+EP  - 1185
+SN  - 1558-2191
+UR  - https://ieeexplore.ieee.org/abstract/document/1033782
+Y2  - 2025/11/06/20:18:19
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1033782&ref=
+KW  - Air traffic control
+KW  - Authorization
+KW  - Banking
+KW  - Credit cards
+KW  - Data security
+KW  - Database systems
+KW  - Intrusion detection
+KW  - Logistics
+KW  - Protection
+KW  - Transaction databases
+ER  - 
+
+TY  - CONF
+TI  - Bitcoin Transaction Malleability and MtGox
+AU  - Decker, Christian
+AU  - Wattenhofer, Roger
+A2  - Kutyłowski, Mirosław
+A2  - Vaidya, Jaideep
+AB  - In Bitcoin, transaction malleability describes the fact that the signatures that prove the ownership of bitcoins being transferred in a transaction do not provide any integrity guarantee for the signatures themselves. This allows an attacker to mount a malleability attack in which it intercepts, modifies, and rebroadcasts a transaction, causing the transaction issuer to believe that the original transaction was not confirmed. In February 2014 MtGox, once the largest Bitcoin exchange, closed and filed for bankruptcy claiming that attackers used malleability attacks to drain its accounts. In this work we use traces of the Bitcoin network for over a year preceding the filing to show that, while the problem is real, there was no widespread use of malleability attacks before the closure of MtGox.
+C1  - Cham
+C3  - Computer Security - ESORICS 2014
+DA  - 2014///
+PY  - 2014
+DO  - 10.1007/978-3-319-11212-1_18
+DP  - Springer Link
+SP  - 313
+EP  - 326
+LA  - en
+PB  - Springer International Publishing
+SN  - 978-3-319-11212-1
+L1  - https://link.springer.com/content/pdf/10.1007%2F978-3-319-11212-1_18.pdf
+KW  - Bitcoin
+KW  - Malleability
+KW  - MtGox
+KW  - Signature
+KW  - Theft
+KW  - Transaction
+ER  - 
+
+TY  - JOUR
+TI  - Manipulated Transaction Collision Attack on Execute-Order-Validate Blockchain
+AU  - Zhang, Ming
+AU  - Sun, Wenhai
+AU  - Li, Hui
+AU  - Wang, Xiaofeng
+AU  - Yang, Zihao
+AU  - Qu, Chao
+AU  - Li, Xiaoguang
+T2  - IEEE Transactions on Dependable and Secure Computing
+AB  - The Execute-Order-Validate blockchain enhances performance by allowing parallel transaction execution, yet it also introduces transaction conflicts that can cause state inconsistencies in the ledger. Previous research has focused on resolving conflicts under the assumption of the “good” intent of the senders. In this paper, we explore an unstudied scenario where a malicious user can intentionally generate transaction collisions to disrupt the service request of a target user to the underlying decentralized application (DApp). We call it manipulated transaction collision (MTC) attack. We overcome the challenges of identifying the conditions and best strategies to launch this targeted attack under various network settings. Our experiment results show that the MTC attack can effectively cause the victim to be continuously rejected by the blockchain, i.e., over 90% success rate in all tested cases on the Hyperledger Fabric blockchain. To combat this new threat, we first propose a machine-learning-assisted detection method that helps identify the adversarial behavior within massive background traffic. To further enhance blockchain resilience, we propose a more precise transaction conflicts definition and present a novel mitigation method, which not only prevents the attack but also significantly reduces the probability of natural conflicts by up to 75% in the tested DApp compared to state-of-the-art optimization methods.
+DA  - 2025/03//
+PY  - 2025
+DO  - 10.1109/TDSC.2024.3428549
+DP  - IEEE Xplore
+VL  - 22
+IS  - 2
+SP  - 1132
+EP  - 1149
+SN  - 1941-0018
+UR  - https://ieeexplore.ieee.org/abstract/document/10599806
+Y2  - 2025/11/06/20:08:13
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10599806&ref=
+KW  - Aerospace electronics
+KW  - Blockchain security
+KW  - Blockchains
+KW  - Decentralized applications
+KW  - Fabrics
+KW  - Prevention and mitigation
+KW  - read-write conflict
+KW  - Supply chains
+KW  - Throughput
+ER  - 
+
+TY  - JOUR
+TI  - Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services
+AU  - Gilbert, Seth
+AU  - Lynch, Nancy
+T2  - SIGACT News
+AB  - When designing distributed web services, there are three properties that are commonly desired: consistency, availability, and partition tolerance. It is impossible to achieve all three. In this note, we prove this conjecture in the asynchronous network model, and then discuss solutions to this dilemma in the partially synchronous model.
+DA  - 2002/06/01/
+PY  - 2002
+DO  - 10.1145/564585.564601
+DP  - ACM Digital Library
+VL  - 33
+IS  - 2
+SP  - 51
+EP  - 59
+SN  - 0163-5700
+UR  - https://dl.acm.org/doi/10.1145/564585.564601
+Y2  - 2025/12/11/18:39:28
+L1  - https://dl.acm.org/doi/pdf/10.1145/564585.564601
+ER  - 
+
+TY  - CONF
+TI  - teEther: Gnawing at Ethereum to Automatically Exploit Smart Contracts
+AU  - Krupp, Johannes
+AU  - Rossow, Christian
+T2  - 27th USENIX Security Symposium (USENIX Security 18)
+DA  - 2018///
+PY  - 2018
+DP  - www.usenix.org
+SP  - 1317
+EP  - 1333
+LA  - en
+SN  - 978-1-939133-04-5
+ST  - teEther
+UR  - https://www.usenix.org/conference/usenixsecurity18/presentation/krupp
+Y2  - 2025/12/10/22:37:16
+L1  - https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-krupp.pdf
+ER  - 
+
+TY  - CONF
+TI  - Securify: Practical Security Analysis of Smart Contracts
+AU  - Tsankov, Petar
+AU  - Dan, Andrei
+AU  - Drachsler-Cohen, Dana
+AU  - Gervais, Arthur
+AU  - Bünzli, Florian
+AU  - Vechev, Martin
+T3  - CCS '18
+AB  - Permissionless blockchains allow the execution of arbitrary programs (called smart contracts), enabling mutually untrusted entities to interact without relying on trusted third parties. Despite their potential, repeated security concerns have shaken the trust in handling billions of USD by smart contracts. To address this problem, we present Securify, a security analyzer for Ethereum smart contracts that is scalable, fully automated, and able to prove contract behaviors as safe/unsafe with respect to a given property. Securify's analysis consists of two steps. First, it symbolically analyzes the contract's dependency graph to extract precise semantic information from the code. Then, it checks compliance and violation patterns that capture sufficient conditions for proving if a property holds or not. To enable extensibility, all patterns are specified in a designated domain-specific language. Securify is publicly released, it has analyzed &gt;18K contracts submitted by its users, and is regularly used to conduct security audits by experts. We present an extensive evaluation of Securify over real-world Ethereum smart contracts and demonstrate that it can effectively prove the correctness of smart contracts and discover critical violations.
+C1  - New York, NY, USA
+C3  - Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security
+DA  - 2018/10/15/
+PY  - 2018
+DO  - 10.1145/3243734.3243780
+DP  - ACM Digital Library
+SP  - 67
+EP  - 82
+PB  - Association for Computing Machinery
+SN  - 978-1-4503-5693-0
+ST  - Securify
+UR  - https://dl.acm.org/doi/10.1145/3243734.3243780
+Y2  - 2025/12/10/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3243734.3243780
+ER  - 
+
+TY  - JOUR
+TI  - The Bitcoin Backbone Protocol: Analysis and Applications
+AU  - Garay, Juan
+AU  - Kiayias, Aggelos
+AU  - Leonardos, Nikos
+T2  - J. ACM
+AB  - Bitcoin is the first and most popular decentralized cryptocurrency to date. In this work, we extract and analyze the core of the Bitcoin protocol, which we term the Bitcoin backbone, and prove three of its fundamental properties which we call Common Prefix, Chain Quality, and Chain Growth in the static setting where the number of players remains fixed. Our proofs hinge on appropriate and novel assumptions on the “hashing power” of the protocol participants and their interplay with the protocol parameters and the time needed for reliable message passing between honest parties in terms of computational steps. A takeaway from our analysis is that, all else being equal, the protocol’s provable tolerance in terms of the number of adversarial parties (or, equivalently, their “hashing power” in our model) decreases as the duration of a message passing round increases.Next, we propose and analyze applications that can be built “on top” of the backbone protocol, specifically focusing on Byzantine agreement (BA) and on the notion of a public transaction ledger. Regarding BA, we observe that a proposal due to Nakamoto falls short of solving it, and present a simple alternative which works assuming that the adversary’s hashing power is bounded by 1/3. The public transaction ledger captures the essence of Bitcoin’s operation as a cryptocurrency, in the sense that it guarantees the liveness and persistence of committed transactions. Based on this notion, we describe and analyze the Bitcoin system as well as a more elaborate BA protocol and we prove them secure assuming the adversary’s hashing power is strictly less than 1/2. Instrumental to this latter result is a technique we call 2-for-1 proof-of-work (PoW) that has proven to be useful in the design of other PoW-based protocols.
+DA  - 2024///
+PY  - 2024
+DO  - 10.1145/3653445
+DP  - ACM Digital Library
+VL  - 71
+IS  - 4
+SP  - 25:1
+EP  - 25:49
+SN  - 0004-5411
+ST  - The Bitcoin Backbone Protocol
+UR  - https://dl.acm.org/doi/10.1145/3653445
+Y2  - 2025/12/10/19:57:02
+L1  - https://dl.acm.org/doi/pdf/10.1145/3653445
+ER  - 
+
+TY  - JOUR
+TI  - Understanding a Revolutionary and Flawed Grand Experiment in Blockchain: The DAO Attack
+AU  - Shier, Charlie
+AU  - Mehar, Muhammad Izhar
+AU  - Giambattista, Alana
+AU  - Gong, Elgar
+AU  - Fletcher, Gabrielle
+AU  - Sanayhie, Ryan
+AU  - Laskowski, Marek
+AU  - Kim, Henry M.
+T2  - SSRN Electronic Journal
+AB  - In spring 2016, The Distributed Autonomous Organization (The DAO) was created on Ethereum. As with Bitcoin, Ethereum uses a P2P network, where distributed ledgers are implemented as daisy-chained blocks of data. Ethereum’s native cryptocurrency, Ethers, are spent to execute pieces of code called smart contracts. Investors paid their Ethers for The DAO to operate, and received the opportunity to vote on and become investors in venture projects proposed by Ethereum-based startups. Transactions and settlements between investors and startups executed autonomously. The DAO experiment failed shortly after inception as an anonymous hacker stole over $50M USD worth of Ethers out of $168M invested. The Ethereum community voted to return (or fork) the state of the network to one prior to the hack, returning Ethers back to investors and shuttering The DAO. However, this action arguably represented a bailout—ironically, Bitcoin was conceived as a reaction against the 2008 bailout of US banks—and violated the ledger immutability and “code is law” ethos of the blockchain community.
+DA  - 2017///
+PY  - 2017
+DO  - 10.2139/ssrn.3014782
+DP  - DOI.org (Crossref)
+J2  - SSRN Journal
+LA  - en
+SN  - 1556-5068
+ST  - Understanding a Revolutionary and Flawed Grand Experiment in Blockchain
+UR  - https://www.ssrn.com/abstract=3014782
+Y2  - 2025/12/11/22:19:13
+ER  - 
+
+TY  - CONF
+TI  - Ethainter: a smart contract security analyzer for composite vulnerabilities
+AU  - Brent, Lexi
+AU  - Grech, Neville
+AU  - Lagouvardos, Sifis
+AU  - Scholz, Bernhard
+AU  - Smaragdakis, Yannis
+T3  - PLDI 2020
+AB  - Smart contracts on permissionless blockchains are exposed to inherent security risks due to interactions with untrusted entities. Static analyzers are essential for identifying security risks and avoiding millions of dollars worth of damage. We introduce Ethainter, a security analyzer checking information flow with data sanitization in smart contracts. Ethainter identifies composite attacks that involve an escalation of tainted information, through multiple transactions, leading to severe violations. The analysis scales to the entire blockchain, consisting of hundreds of thousands of unique smart contracts, deployed over millions of accounts. Ethainter is more precise than previous approaches, as we confirm by automatic exploit generation (e.g., destroying over 800 contracts on the Ropsten network) and by manual inspection, showing a very high precision of 82.5% valid warnings for end-to-end vulnerabilities. Ethainter’s balance of precision and completeness offers significant advantages over other tools such as Securify, Securify2, and teEther.
+C1  - New York, NY, USA
+C3  - Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation
+DA  - 2020/06/11/
+PY  - 2020
+DO  - 10.1145/3385412.3385990
+DP  - ACM Digital Library
+SP  - 454
+EP  - 469
+PB  - Association for Computing Machinery
+SN  - 978-1-4503-7613-6
+ST  - Ethainter
+UR  - https://dl.acm.org/doi/10.1145/3385412.3385990
+Y2  - 2025/12/16/
+L1  - https://dl.acm.org/doi/pdf/10.1145/3385412.3385990
+ER  - 
+
+TY  - CONF
+TI  - Why Buy When You Can Rent?
+AU  - Bonneau, Joseph
+A2  - Clark, Jeremy
+A2  - Meiklejohn, Sarah
+A2  - Ryan, Peter Y.A.
+A2  - Wallach, Dan
+A2  - Brenner, Michael
+A2  - Rohloff, Kurt
+AB  - The Bitcoin cryptocurrency introduced a novel distributed consensus mechanism relying on economic incentives. While a coalition controlling a majority of computational power may undermine the system, for example by double-spending funds, it is often assumed it would be incentivized not to attack to protect its long-term stake in the health of the currency. We show how an attacker might purchase mining power (perhaps at a cost premium) for a short duration via bribery. Indeed, bribery can even be performed in-band with the system itself enforcing the bribe. A bribing attacker would not have the same concerns about the long-term health of the system, as their majority control is inherently short-lived. New modeling assumptions are needed to explain why such attacks have not been observed in practice. The need for all miners to avoid short-term profits by accepting bribes further suggests a potential tragedy of the commons which has not yet been analyzed.
+C1  - Berlin, Heidelberg
+C3  - Financial Cryptography and Data Security
+DA  - 2016///
+PY  - 2016
+DO  - 10.1007/978-3-662-53357-4_2
+DP  - Springer Link
+SP  - 19
+EP  - 26
+LA  - en
+PB  - Springer
+SN  - 978-3-662-53357-4
+L1  - https://link.springer.com/content/pdf/10.1007%2F978-3-662-53357-4_2.pdf
+KW  - Large Transaction
+KW  - Mining Capacity
+KW  - Mining Exchange
+KW  - Mining Pool
+KW  - Mining Power
+ER  - 
+
+TY  - CONF
+TI  - Chip and PIN is Broken
+AU  - Murdoch, Steven J.
+AU  - Drimer, Saar
+AU  - Anderson, Ross
+AU  - Bond, Mike
+T2  - 2010 IEEE Symposium on Security and Privacy
+AB  - EMV is the dominant protocol used for smart card payments worldwide, with over 730 million cards in circulation. Known to bank customers as “Chip and PIN”, it is used in Europe; it is being introduced in Canada; and there is pressure from banks to introduce it in the USA too. EMV secures credit and debit card transactions by authenticating both the card and the customer presenting it through a combination of cryptographic authentication codes, digital signatures, and the entry of a PIN. In this paper we describe and demonstrate a protocol flaw which allows criminals to use a genuine card to make a payment without knowing the card's PIN, and to remain undetected even when the merchant has an online connection to the banking network. The fraudster performs a man-in-the-middle attack to trick the terminal into believing the PIN verified correctly, while telling the card that no PIN was entered at all. The paper considers how the flaws arose, why they remained unknown despite EMV's wide deployment for the best part of a decade, and how they might be fixed. Because we have found and validated a practical attack against the core functionality of EMV, we conclude that the protocol is broken. This failure is significant in the field of protocol design, and also has important public policy implications, in light of growing reports of fraud on stolen EMV cards. Frequently, banks deny such fraud victims a refund, asserting that a card cannot be used without the correct PIN, and concluding that the customer must be grossly negligent or lying. Our attack can explain a number of these cases, and exposes the need for further research to bridge the gap between the theoretical and practical security of bank payment systems. It also demonstrates the need for the next version of EMV to be engineered properly.
+C3  - 2010 IEEE Symposium on Security and Privacy
+DA  - 2010/05//
+PY  - 2010
+DO  - 10.1109/SP.2010.33
+DP  - IEEE Xplore
+SP  - 433
+EP  - 446
+UR  - https://ieeexplore.ieee.org/abstract/document/5504801
+Y2  - 2025/12/18/22:42:55
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5504801&ref=
+KW  - authentication
+KW  - Authentication
+KW  - bank security
+KW  - Banking
+KW  - Bridges
+KW  - card fraud
+KW  - Chip and PIN
+KW  - Cryptographic protocols
+KW  - Cryptography
+KW  - Digital signatures
+KW  - EMV
+KW  - Europe
+KW  - protocol failure
+KW  - Public policy
+KW  - Security
+KW  - security economics
+KW  - Smart cards
+ER  - 
+
+TY  - CONF
+TI  - Chip and Skim: Cloning EMV Cards with the Pre-play Attack
+AU  - Bond, Mike
+AU  - Choudary, Omar
+AU  - Murdoch, Steven J.
+AU  - Skorobogatov, Sergei
+AU  - Anderson, Ross
+T2  - 2014 IEEE Symposium on Security and Privacy
+AB  - EMV, also known as "Chip and PIN", is the leading system for card payments worldwide. It is used throughout Europe and much of Asia, and is starting to be introduced in North America too. Payment cards contain a chip so they can execute an authentication protocol. This protocol requires point-of-sale (POS) terminals or ATMs to generate a nonce, called the unpredictable number, for each transaction to ensure it is fresh. We have discovered two serious problems: a widespread implementation flaw and a deeper, more difficult to fix flaw with the EMV protocol itself. The first flaw is that some EMV implementers have merely used counters, timestamps or home-grown algorithms to supply this nonce. This exposes them to a "pre-play" attack which is indistinguishable from card cloning from the standpoint of the logs available to the card-issuing bank, and can be carried out even if it is impossible to clone a card physically. Card cloning is the very type of fraud that EMV was supposed to prevent. We describe how we detected the vulnerability, a survey methodology we developed to chart the scope of the weakness, evidence from ATM and terminal experiments in the field, and our implementation of proof-of-concept attacks. We found flaws in widely-used ATMs from the largest manufacturers. We can now explain at least some of the increasing number of frauds in which victims are refused refunds by banks which claim that EMV cards cannot be cloned and that a customer involved in a dispute must therefore be mistaken or complicit. The second problem was exposed by the above work. Independent of the random number quality, there is a protocol failure: the actual random number generated by the terminal can simply be replaced by one the attacker used earlier when capturing an authentication code from the card. This variant of the pre-play attack may be carried out by malware in an ATM or POS terminal, or by a man-in-the-middle between the terminal and the acquirer. We explore the design and implementation mistakes that enabled these flaws to evade detection until now: shortcomings of the EMV specification, of the EMV kernel certification process, of implementation testing, formal analysis, and monitoring customer complaints. Finally we discuss countermeasures. More than a year after our initial responsible disclosure of these flaws to the banks, action has only been taken to mitigate the first of them, while we have seen a likely case of the second in the wild, and the spread of ATM and POS malware is making it ever more of a threat.
+C3  - 2014 IEEE Symposium on Security and Privacy
+DA  - 2014/05//
+PY  - 2014
+DO  - 10.1109/SP.2014.11
+DP  - IEEE Xplore
+SP  - 49
+EP  - 64
+ST  - Chip and Skim
+UR  - https://ieeexplore.ieee.org/document/6956556/
+Y2  - 2025/12/18/22:41:57
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6956556&ref=
+KW  - Authentication
+KW  - Authorization
+KW  - Cloning
+KW  - Cryptography
+KW  - Online banking
+KW  - Protocols
+KW  - Radiation detectors
+ER  - 
+
+TY  - CONF
+TI  - The EMV Standard: Break, Fix, Verify
+AU  - Basin, David
+AU  - Sasse, Ralf
+AU  - Toro-Pozo, Jorge
+T2  - 2021 IEEE Symposium on Security and Privacy (SP)
+AB  - EMV is the international protocol standard for smartcard payment and is used in over 9 billion cards worldwide. Despite the standard’s advertised security, various issues have been previously uncovered, deriving from logical flaws that are hard to spot in EMV’s lengthy and complex specification, running over 2,000 pages.We formalize a comprehensive symbolic model of EMV in Tamarin, a state-of-the-art protocol verifier. Our model is the first that supports a fine-grained analysis of all relevant security guarantees that EMV is intended to offer. We use our model to automatically identify flaws that lead to two critical attacks: one that defrauds the cardholder and a second that defrauds the merchant. First, criminals can use a victim’s Visa contactless card to make payments for amounts that require cardholder verification, without knowledge of the card’s PIN. We built a proof-of-concept Android application and successfully demonstrated this attack on real-world payment terminals. Second, criminals can trick the terminal into accepting an unauthentic offline transaction, which the issuing bank should later decline, after the criminal has walked away with the goods. This attack is possible for implementations following the standard, although we did not test it on actual terminals for ethical reasons. Finally, we propose and verify improvements to the standard that prevent these attacks, as well as any other attacks that violate the considered security properties. The proposed improvements can be easily implemented in the terminals and do not affect the cards in circulation.
+C3  - 2021 IEEE Symposium on Security and Privacy (SP)
+DA  - 2021/05//
+PY  - 2021
+DO  - 10.1109/SP40001.2021.00037
+DP  - IEEE Xplore
+SP  - 1766
+EP  - 1781
+ST  - The EMV Standard
+UR  - https://ieeexplore.ieee.org/document/9519404/
+Y2  - 2025/12/18/22:12:38
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=9519404&ref=
+KW  - Analytical models
+KW  - authentication
+KW  - Authentication
+KW  - credit card fraud
+KW  - Credit cards
+KW  - EMV
+KW  - formal analysis
+KW  - payment security
+KW  - PIN
+KW  - Privacy
+KW  - Protocols
+KW  - Software
+KW  - Tools
+KW  - Visa
+ER  - 
+
+TY  - GEN
+TI  - An Empirical Analysis of Traceability in the Monero Blockchain
+AU  - Möser, Malte
+AU  - Soska, Kyle
+AU  - Heilman, Ethan
+AU  - Lee, Kevin
+AU  - Heffan, Henry
+AU  - Srivastava, Shashvat
+AU  - Hogan, Kyle
+AU  - Hennessey, Jason
+AU  - Miller, Andrew
+AU  - Narayanan, Arvind
+AU  - Christin, Nicolas
+AB  - Monero is a privacy-centric cryptocurrency that allows users to obscure their transactions by including chaff coins, called "mixins," along with the actual coins they spend. In this paper, we empirically evaluate two weaknesses in Monero's mixin sampling strategy. First, about 62% of transaction inputs with one or more mixins are vulnerable to "chain-reaction" analysis -- that is, the real input can be deduced by elimination. Second, Monero mixins are sampled in such a way that they can be easily distinguished from the real coins by their age distribution; in short, the real input is usually the "newest" input. We estimate that this heuristic can be used to guess the real input with 80% accuracy over all transactions with 1 or more mixins. Next, we turn to the Monero ecosystem and study the importance of mining pools and the former anonymous marketplace AlphaBay on the transaction volume. We find that after removing mining pool activity, there remains a large amount of potentially privacy-sensitive transactions that are affected by these weaknesses. We propose and evaluate two countermeasures that can improve the privacy of future transactions.
+DA  - 2018/04/23/
+PY  - 2018
+DO  - 10.48550/arXiv.1704.04299
+DP  - arXiv.org
+PB  - arXiv
+UR  - http://arxiv.org/abs/1704.04299
+Y2  - 2025/12/17/19:15:23
+L1  - http://arxiv.org/pdf/1704.04299v4
+L2  - https://arxiv.org/abs/1704.04299
+KW  - Computer Science - Cryptography and Security
+ER  - 
+
+TY  - CONF
+TI  - A Traceability Analysis of Monero’s Blockchain
+AU  - Kumar, Amrit
+AU  - Fischer, Clément
+AU  - Tople, Shruti
+AU  - Saxena, Prateek
+A2  - Foley, Simon N.
+A2  - Gollmann, Dieter
+A2  - Snekkenes, Einar
+AB  - Privacy and anonymity are important desiderata in the use of cryptocurrencies. Monero—a privacy centric cryptocurrency has rapidly gained popularity due to its unlinkability and untraceablity guarantees. It has a market capitalization of USD 290M. In this work, we quantify the efficacy of three attacks on Monero’s untraceability guarantee, which promises to make it hard to trace the origin of a received fund, by analyzing its blockchain data. To this end, we develop three attack routines and evaluate them on the Monero blockchain. Our results show that in 88% of cases, the origin of the funds can be easily determined with certainty. Moreover, we have compelling evidence that two of the attack routines also extend to Monero RingCTs—the second generation Monero that even hides the transaction amount. We further observe that over 98% of the results can in fact be obtained by a simple temporal analysis. In light of our findings, we discuss mitigations to strengthen Monero against these attacks. We shared our findings with the Monero development team and the general community. This has resulted into several discussions and proposals for fixes.
+C1  - Cham
+C3  - Computer Security – ESORICS 2017
+DA  - 2017///
+PY  - 2017
+DO  - 10.1007/978-3-319-66399-9_9
+DP  - Springer Link
+SP  - 153
+EP  - 173
+LA  - en
+PB  - Springer International Publishing
+SN  - 978-3-319-66399-9
+L1  - https://link.springer.com/content/pdf/10.1007%2F978-3-319-66399-9_9.pdf
+KW  - Anonymity
+KW  - Blockchain
+KW  - Cryptocurrency
+KW  - Monero
+KW  - Traceability
+ER  - 
+
+TY  - CONF
+TI  - Stubborn Mining: Generalizing Selfish Mining and Combining with an Eclipse Attack
+AU  - Nayak, Kartik
+AU  - Kumar, Srijan
+AU  - Miller, Andrew
+AU  - Shi, Elaine
+T2  - 2016 IEEE European Symposium on Security and Privacy (EuroS&P)
+AB  - Selfish mining, originally discovered by Eyal et al. [9], is a well-known attack where a selfish miner, under certain conditions, can gain a disproportionate share of reward by deviating from the honest behavior. In this paper, we expand the mining strategy space to include novel "stubborn" strategies that, for a large range of parameters, earn the miner more revenue. Consequently, we show that the selfish mining attack is not (in general) optimal. Further, we show how a miner can further amplify its gain by non-trivially composing mining attacks with network-level eclipse attacks. We show, surprisingly, that given the attacker's best strategy, in some cases victims of an eclipse attack can actually benefit from being eclipsed!
+C3  - 2016 IEEE European Symposium on Security and Privacy (EuroS&P)
+DA  - 2016/03//
+PY  - 2016
+DO  - 10.1109/EuroSP.2016.32
+DP  - IEEE Xplore
+SP  - 305
+EP  - 320
+ST  - Stubborn Mining
+UR  - https://ieeexplore.ieee.org/abstract/document/7467362
+Y2  - 2026/01/02/20:24:09
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=7467362&ref=
+KW  - Bitcoin
+KW  - Computational modeling
+KW  - Cryptography
+KW  - Lead
+KW  - Online banking
+KW  - Peer-to-peer computing
+KW  - Protocols
+KW  - Selfish Mining
+ER  - 
+
+TY  - JOUR
+TI  - Majority is not enough: bitcoin mining is vulnerable
+AU  - Eyal, Ittay
+AU  - Sirer, Emin Gün
+T2  - Commun. ACM
+AB  - The Bitcoin cryptocurrency records its transactions in a public log called the blockchain. Its security rests critically on the distributed protocol that maintains the blockchain, run by participants called miners. Conventional wisdom asserts that the mining protocol is incentive-compatible and secure against colluding minority groups, that is, it incentivizes miners to follow the protocol as prescribed.We show that the Bitcoin mining protocol is not incentive-compatible. We present an attack with which colluding miners' revenue is larger than their fair share. The attack can have significant consequences for Bitcoin: Rational miners will prefer to join the attackers, and the colluding group will increase in size until it becomes a majority. At this point, the Bitcoin system ceases to be a decentralized currency.Unless certain assumptions are made, selfish mining may be feasible for any coalition size of colluding miners. We propose a practical modification to the Bitcoin protocol that protects Bitcoin in the general case. It prohibits selfish mining by a coalition that command less than 1/4 of the resources. This threshold is lower than the wrongly assumed 1/2 bound, but better than the current reality where a coalition of any size can compromise the system.
+DA  - 2018/06/25/
+PY  - 2018
+DO  - 10.1145/3212998
+DP  - ACM Digital Library
+VL  - 61
+IS  - 7
+SP  - 95
+EP  - 102
+SN  - 0001-0782
+ST  - Majority is not enough
+UR  - https://dl.acm.org/doi/10.1145/3212998
+Y2  - 2026/01/02/20:20:10
+ER  - 
+
+TY  - CONF
+TI  - A Comparison of Commercial and Military Computer Security Policies
+AU  - Clark, David D.
+AU  - Wilson, David R.
+T2  - 1987 IEEE Symposium on Security and Privacy
+AB  - Most discussions of computer security focus on control of disclosure. In Particular, the U.S. Department of Defense has developed a set of criteria for computer mechanisms to provide control of classified information. However, for that core of data processing concerned with business operation and control of assets, the primary security concern is data integrity. This paper presents a policy for data integrity based on commercial data processing practices, and compares the mechanisms needed for this policy with the mechanisms needed to enforce the lattice model for information security. We argue that a lattice model is not sufficient to characterize integrity policies, and that distinct mechanisms are needed to Control disclosure and to provide integrity.
+C3  - 1987 IEEE Symposium on Security and Privacy
+DA  - 1987/04//
+PY  - 1987
+DO  - 10.1109/SP.1987.10001
+DP  - IEEE Xplore
+SP  - 184
+EP  - 184
+UR  - https://ieeexplore.ieee.org/abstract/document/6234890
+Y2  - 2026/01/14/22:47:03
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6234890&ref=
+KW  - Computational modeling
+KW  - Computer security
+KW  - Computers
+KW  - Data processing
+KW  - Information security
+KW  - Military computing
+KW  - theory/foundation
+ER  - 
+
+TY  - JOUR
+TI  - Kerberos: An Authentication Service for Open Network Systems
+AU  - Steiner, Jennifer G
+AU  - Neuman, Clifford
+AU  - Schiller, Jeffrey I
+AB  - In an open network computing environment, a workstation cannot be trusted to identify its users correctly to network services. Kerberos provides an alternative approach whereby a trusted third-party authentication service is used to verify users’ identities. This paper gives an overview of the Kerberos authentication model as implemented for MIT’s Project Athena. It describes the protocols used by clients, servers, and Kerberos to achieve authentication. It also describes the management and replication of the database required. The views of Kerberos as seen by the user, programmer, and administrator are described. Finally, the role of Kerberos in the larger Athena picture is given, along with a list of applications that presently use Kerberos for user authentication. We describe the addition of Kerberos authentication to the Sun Network File System as a case study for integrating Kerberos with an existing application.
+DA  - 1988///
+PY  - 1988
+DP  - Zotero
+LA  - en
+L1  - https://d1wqtxts1xzle7.cloudfront.net/83449355/kerberos-libre.pdf?1649440038=&response-content-disposition=inline%3B+filename%3DEvidence_and_Ideology_in_Assessing_the_E.pdf&Expires=1768434530&Signature=ZYlHQG9PrmsL1GGnm3u5Zpo-~vK~GNtXjV8J8R0Uio5bLm7qBjho3owWXRyB24-2JCtheU1fSXThw1QjWeMBkkB657U-0M0yd~0-gLx1G6rlgQ66c-ycWNNxZFyRF~vnie-1k9pyr6C37RtG8j4RL6GwvXr5jB~LTTCqQBa5ZY3VCmq6H98vNAFZ6BRsFVPecKuBgBHnUUFeyhyDIQrs6~vduEVT4bSM3Nm3GEUZev5eL384nB6ALxdP0gvVpx2c5nPSLUrJFSCfnSsxYdN~DY2kwvn0EjoMYRbUuvSuvDPqAI-BcLhTIDuYcuoOvYZOVUT7VswxHR0vZjOas2rZpw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+ER  - 
+
+TY  - CONF
+TI  - Flash Boys 2.0: Frontrunning in Decentralized Exchanges, Miner Extractable Value, and Consensus Instability
+AU  - Daian, Philip
+AU  - Goldfeder, Steven
+AU  - Kell, Tyler
+AU  - Li, Yunqi
+AU  - Zhao, Xueyuan
+AU  - Bentov, Iddo
+AU  - Breidenbach, Lorenz
+AU  - Juels, Ari
+T2  - 2020 IEEE Symposium on Security and Privacy (SP)
+AB  - Blockchains, and specifically smart contracts, have promised to create fair and transparent trading ecosystems.Unfortunately, we show that this promise has not been met. We document and quantify the widespread and rising deployment of arbitrage bots in blockchain systems, specifically in decentralized exchanges (or "DEXes"). Like high-frequency traders on Wall Street, these bots exploit inefficiencies in DEXes, paying high transaction fees and optimizing network latency to frontrun, i.e., anticipate and exploit, ordinary users' DEX trades.We study the breadth of DEX arbitrage bots in a subset of transactions that yield quantifiable revenue to these bots. We also study bots' profit-making strategies, with a focus on blockchain-specific elements. We observe bots engage in what we call priority gas auctions (PGAs), competitively bidding up transaction fees in order to obtain priority ordering, i.e., early block position and execution, for their transactions. PGAs present an interesting and complex new continuous-time, partial-information, game-theoretic model that we formalize and study. We release an interactive web portal, frontrun.me, to provide the community with real-time data on PGAs. We additionally show that high fees paid for priority transaction ordering poses a systemic risk to consensus-layer security. We explain that such fees are just one form of a general phenomenon in DEXes and beyond-what we call miner extractable value (MEV)-that poses concrete, measurable, consensus-layer security risks. We show empirically that MEV poses a realistic threat to Ethereum today. Our work highlights the large, complex risks created by transaction-ordering dependencies in smart contracts and the ways in which traditional forms of financial-market exploitation are adapting to and penetrating blockchain economies.
+C3  - 2020 IEEE Symposium on Security and Privacy (SP)
+DA  - 2020/05//
+PY  - 2020
+DO  - 10.1109/SP40000.2020.00040
+DP  - IEEE Xplore
+SP  - 910
+EP  - 927
+ST  - Flash Boys 2.0
+UR  - https://ieeexplore.ieee.org/document/9152675/
+Y2  - 2026/01/14/22:02:44
+L1  - https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=9152675&ref=
+KW  - Bitcoin
+KW  - Contracts
+KW  - Electronics packaging
+KW  - Games
+KW  - Peer-to-peer computing
+ER  - 
+
